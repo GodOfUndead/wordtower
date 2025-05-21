@@ -8,7 +8,6 @@ const rateLimit = require('express-rate-limit');
 
 const authRoutes = require('./routes/auth');
 const gameRoutes = require('./routes/game');
-const userRoutes = require('./routes/user');
 
 const app = express();
 
@@ -28,7 +27,6 @@ app.use(limiter);
 // Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/game', gameRoutes);
-app.use('/api/user', userRoutes);
 
 // Error handling middleware
 app.use((err, req, res, next) => {
