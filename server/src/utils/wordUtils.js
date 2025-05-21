@@ -17,7 +17,8 @@ const loadWordLists = async () => {
       path.join(__dirname, '../../data/words.json'),
       'utf8'
     );
-    const words = JSON.parse(data);
+    const parsedData = JSON.parse(data);
+    const words = parsedData.words;
     
     // Sort words by length
     words.forEach((word) => {
